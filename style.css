@@ -540,6 +540,36 @@ footer
     text-decoration: underline;
 }
 
+.music-section
+{
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.music-card
+{
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-card:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.music-album-img
+{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
 @media (max-width: 768px)
 {
     .info-title
