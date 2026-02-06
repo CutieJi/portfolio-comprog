@@ -45,15 +45,34 @@ h6
     z-index: 1000;
 }
 
+.profile-img
+{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: floatPhoto 6s ease-in-out infinite;
+}
+
+@keyframes floatPhoto
+{
+    0%, 100%
+    {
+        transform: translateY(0);
+    }
+    50%
+    {
+        transform: translateY(-12px);
+    }
+}
+
 .info-section
 {
-    /* CSS Background - Gradient background */
     background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    /* CSS Colors - Text color */
     color: var(--white);
-    /* CSS Height and Width */
     min-height: 100vh;
-    /* CSS Padding */
     padding: 80px 20px;
     position: relative;
     overflow: hidden;
@@ -357,6 +376,48 @@ h6
 .project-content
 {
     padding: 25px;
+}
+
+.project-buttons
+{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-project
+{
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-project:hover
+{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    color: #fff;
+}
+
+.btn-project-outline
+{
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-project-outline:hover
+{
+    background: var(--secondary-color);
+    color: #fff;
 }
 
 .contact-section

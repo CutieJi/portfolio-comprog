@@ -1,0 +1,176 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+}
+
+header
+{
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1
+{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a
+{
+    margin-left: 1.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+nav a:hover
+{
+    opacity: 1;
+}
+
+.info
+{
+    padding: 5rem 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.info-text h2
+{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-text p
+{
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.btn
+{
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    background: #00c6ff;
+    color: #000;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.info-card
+{
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+section
+{
+    padding: 4rem 5%;
+}
+
+section h3
+{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about p
+{
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.projects
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project
+{
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.project:hover
+{
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project h4
+{
+    margin-bottom: 0.5rem;
+}
+
+.project p
+{
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.skills
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skill
+{
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+footer
+{
+    text-align: center;
+    padding: 2rem;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}

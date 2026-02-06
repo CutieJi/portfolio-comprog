@@ -1,0 +1,586 @@
+:root
+{
+    --primary-h-top: 206deg;
+    --primary-s-top: 41%;
+    --primary-l-top: 88%;
+    --primary-h-bottom: 212deg;
+    --primary-s-bottom: 58%;
+    --primary-l-bottom: 44%;
+    --text-color: black;
+    --box-shadow-color: rgba(0, 0, 0, 0.1)
+}
+
+*
+{
+    font-family: "Playpen Sans", cursive
+}
+
+html
+{
+    scroll-behavior: smooth
+}
+
+body
+{
+    margin: 0;
+    padding: 0
+}
+
+img
+{
+    opacity: 0;
+    animation: 1s ease-in forwards fadeIn
+}
+
+.container
+{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh
+}
+
+.container::before
+{
+    content: "";
+    position: fixed;
+    margin: -15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/html-class/assets/images/bg.webp");
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(5px);
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center
+}
+
+.profile-border
+{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .1);
+    padding: 5px;
+    flex-direction: column;
+    max-height: calc(100% - 100px)
+}
+
+.profile
+{
+    z-index: 1;
+    flex-direction: column;
+    --primary-s-top: 43%;
+    --primary-l-top: 99%;
+    --primary-s-bottom: 47%;
+    --primary-l-bottom: 78%;
+    width: 600px;
+    max-height: calc(100vh - 100px)
+}
+
+.profile,
+.profile-border
+{
+    position: relative;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex
+}
+
+.profile .banner
+{
+    height: 190px
+}
+
+.profile .banner img
+{
+    height: 100%;
+    object-fit: cover
+}
+
+.profile .banner,
+.profile .banner img
+{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%
+}
+
+.box-color
+{
+    background: linear-gradient(to bottom, hsl(var(--primary-h-top), var(--primary-s-top), var(--primary-l-top)), hsl(var(--primary-h-bottom), var(--primary-s-bottom), var(--primary-l-bottom)))
+}
+
+.avatar
+{
+    align-items: center;
+    justify-content: center;
+    top: 120px;
+    left: 16px
+}
+
+.avatar .avatar-image
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 8px;
+    background-color: #e8eff6
+}
+
+.avatar,
+.avatar .avatar-image
+{
+    --primary-s-top: 42%;
+    --primary-l-top: 95%;
+    --primary-s-bottom: 44%;
+    --primary-l-bottom: 94%
+}
+
+.avatar-decoration
+{
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.status
+{
+    max-width: 34px;
+    max-height: 44px;
+    -webkit-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+    bottom: 14.64%;
+    right: 14.64%
+}
+
+.avatar,
+.status
+{
+    position: absolute;
+    border-radius: 50%
+}
+
+.status-image
+{
+    width: 20px;
+    height: 20px;
+    padding: 7px;
+    border-radius: 50%
+}
+
+
+.badges
+{
+    flex-direction: row-reverse;
+    padding: 2px;
+    border-radius: 10px;
+    top: 219px;
+    left: 160px;
+    position: absolute
+}
+
+.badges .badges-right
+{
+    flex-direction: row;
+    width: fit-content;
+    height: 26px
+}
+
+.badges img
+{
+    width: 26px
+}
+
+.card
+{
+    margin: 80px 16px 16px;
+    --primary-l-top: 94%;
+    --primary-l-bottom: 94%;
+    border-radius: 5px
+}
+
+.name-box
+{
+    flex-direction: column;
+    margin: 20px 20px 0;
+    padding-left: 5px
+}
+
+.avatar,
+.badges,
+.badges .badges-right,
+.container,
+.name-box
+{
+    display: flex
+}
+
+.display-name
+{
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 8px;
+    border-style: outset;
+    border-width: 4px;
+    border-color: rgb(0, 161, 206);
+}
+
+.section
+{
+    margin-top: -10px;
+    margin-bottom: -1px
+}
+
+.body
+{
+    padding: 0 20px 16px
+}
+
+.content
+{
+    border-top: 1px solid var(--box-shadow-color);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 5px
+}
+
+.body,
+.content
+{
+    max-height: calc(100vh - 530px)
+}
+
+.about-section
+{
+    margin-bottom: 16px;
+    margin-top: 5px
+}
+
+.body .title-body
+{
+    font-weight: 700;
+    line-height: 16px;
+    margin-bottom: 8px
+}
+
+
+.about-me
+{
+    overflow-wrap: break-word;
+    line-height: 20px;
+    font-weight: 500
+}
+
+.anime-3d-grid
+{
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.anime-card
+{
+    flex: 1;
+    height: 160px;
+    perspective: 1000px;
+}
+
+.anime-card-inner
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    border-radius: 12px;
+    border-color: #00b7ff;
+    border-style: inset;
+}
+
+.anime-card-inner2
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    border-radius: 12px;
+    border-color: #87186c;
+    border-style: inset;
+}
+
+.anime-card-inner3
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    border-radius: 12px;
+    border-color: #54ed7d;
+    border-style: inset;
+}
+
+.anime-card-inner4
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    border-radius: 12px;
+    border-color: #d14735;
+    border-style: inset;
+}
+
+.anime-card-inner5
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    border-radius: 12px;
+    border-color: #b68600;
+    border-style: inset;
+}
+
+.anime-card-inner6
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    border-radius: 12px;
+    border-color: #00aff4;
+    border-style: inset;
+}
+
+.anime-card:hover .anime-card-inner,
+.anime-card:hover .anime-card-inner2,
+.anime-card:hover .anime-card-inner3,
+.anime-card:hover .anime-card-inner4,
+.anime-card:hover .anime-card-inner5,
+.anime-card:hover .anime-card-inner6
+{
+    transform: rotateY(180deg);
+}
+
+.anime-front,
+.anime-back
+{
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    padding: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.anime-front
+{
+    background-size: cover;
+    background-position: center;
+}
+
+.anime-front::before
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0));
+}
+
+.anime-front h2
+{
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.anime-back
+{
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg,
+            hsl(var(--primary-h-top), 80%, 85%),
+            hsl(var(--primary-h-bottom), 80%, 65%));
+    color: #111;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.anime-back h4
+{
+    margin: 0 0 6px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.anime-back p
+{
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.roles-body
+{
+    -ms-flex-wrap: wrap;
+    margin: 1px;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.body .roles-body
+{
+    margin-bottom: 10px
+}
+
+.roles-body .rol
+{
+    background: linear-gradient(to bottom, hsl(var(--primary-h-top), var(--primary-s-top), var(--primary-l-top)), hsl(var(--primary-h-bottom), var(--primary-s-bottom), var(--primary-l-bottom)));
+    --primary-l-top: 96%;
+    --primary-l-bottom: 96%;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 4px 4px 0;
+    padding: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 22px;
+    font-size: 12px;
+    font-weight: 500
+}
+
+.roles-body .rol p
+{
+    color: var(--text-color);
+    margin-left: 4px;
+    margin-right: 4px
+}
+
+.softpink
+{
+    color: #f8bbd0
+}
+
+.rosepink
+{
+    color: #ecdcd4
+}
+
+.green
+{
+    color: #1ed760
+}
+
+.blue
+{
+    color: #00aff4
+}
+
+.socials
+{
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.platform
+{
+    width: 225px;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 12px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none
+}
+
+.platform,
+.roles-body .rol
+{
+    box-shadow: 0 0 0 1px var(--box-shadow-color)
+}
+
+.platform-username
+{
+    color: var(--text-color);
+    font-size: .9em;
+    font-weight: 600;
+    margin-left: 10px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+.platform-icon
+{
+    width: 24px;
+    height: 24px
+}
+
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0
+    }
+
+    100%
+    {
+        opacity: 1
+    }
+}
+
+.badges,
+.status
+{
+    --primary-s-top: 41%;
+    --primary-l-top: 97%;
+    --primary-s-bottom: 41%;
+    --primary-l-bottom: 97%
+}
+
+.badges,
+.custom-status,
+.name-box,
+.name-box *
+{
+    width: fit-content
+}
+
+.status-image,
+.badges-right>a,
+.card,
+.content,
+.name-box
+{
+    position: relative
+}

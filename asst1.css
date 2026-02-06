@@ -1,0 +1,245 @@
+:root
+{
+    --gap: 6px;
+    --cell: 77.3px;
+}
+
+*
+{
+    box-sizing: border-box
+}
+
+body
+{
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.legend
+{
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 28px;
+    row-gap: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.legend div
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.box
+{
+    width: 14px;
+    height: 14px;
+    border: 2px solid;
+    background: transparent;
+}
+
+.nonmetal
+{
+    border-color: #ccc;
+}
+
+.alkali
+{
+    border-color: #ff9800;
+}
+
+.alkaline
+{
+    border-color: #e53935;
+}
+
+.transition
+{
+    border-color: #7e57c2;
+}
+
+.metal
+{
+    border-color: #26c6da;
+}
+
+.metalloid
+{
+    border-color: #8bc34a;
+}
+
+.halogen
+{
+    border-color: #00bcd4;
+}
+
+.noble
+{
+    border-color: #2196f3;
+}
+
+.lanthanide
+{
+    border-color: #921863;
+}
+
+.actinide
+{
+    border-color: #ff7043;
+}
+
+.legend-wrapper
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -115px;
+    margin-left: -440px;
+    margin-top: 100px;
+}
+
+.wrapper
+{
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.table
+{
+    display: grid;
+    grid-template-columns: repeat(18, var(--cell));
+    gap: var(--gap);
+    margin: auto;
+    margin-top: -200px;
+}
+
+.element
+{
+    position: relative;
+    min-height: 80px;
+    border: 2px solid #555;
+    text-align: center;
+    transition: .2s;
+}
+
+.element:hover
+{
+    transform: scale(1.08);
+    box-shadow: 0 0 12px currentColor;
+    z-index: 2;
+}
+
+.num
+{
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    font-size: 11px;
+    opacity: .7
+}
+
+.symbol
+{
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 14px
+}
+
+.name
+{
+    font-size: 10px;
+    opacity: .85
+}
+
+.mass
+{
+    font-size: 10px;
+    opacity: .6
+}
+
+.nonmetal
+{
+    border-color: #ccc;
+}
+
+.alkali
+{
+    border-color: #ff9800;
+}
+
+.alkaline
+{
+    border-color: #e53935;
+}
+
+.transition
+{
+    border-color: #7e57c2;
+}
+
+.metal
+{
+    border-color: #26c6da;
+}
+
+.metalloid
+{
+    border-color: #8bc34a;
+}
+
+.halogen
+{
+    border-color: #00bcd4;
+}
+
+.noble
+{
+    border-color: #2196f3;
+}
+
+.lanthanide
+{
+    border-color: #921863;
+}
+
+.actinide {
+    border-color: #ff7043;
+}
+
+.yellow {
+    border-color: #e8f767;
+}
+
+.empty
+{
+    border: none
+}
+
+.series
+{
+    display: grid;
+    grid-template-columns: repeat(18, var(--cell));
+    gap: var(--gap);
+    margin-top: 30px;
+}
+
+.label
+{
+    grid-column: 1/span 2;
+    align-self: center;
+    font-size: 14px;
+    opacity: .7;
+    text-align: center;
+}
