@@ -45,6 +45,18 @@ h6
     z-index: 1000;
 }
 
+.navbar-nav .nav-link
+{
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover
+{
+    color: var(--accent-color) !important;
+}
+
 .profile-img
 {
     width: 180px;
